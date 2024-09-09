@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Shop Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff6392;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        /* Hero section */
+        .hero {
+            height: 80vh;
+            background: url('https://images.unsplash.com/photo-1599785209707-79a0c60da59f') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 4rem;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Ice Cream Menu Grid */
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 50px;
+            background-color: #fff;
+        }
+
+        .menu-item {
+            background-color: #f8f9fa;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+
+        .menu-item p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* About Section */
+        .about {
+            background-color: #f3f4f6;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #ff6392;
+            padding: 50px;
+            text-align: center;
+            color: white;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .contact button {
+            background-color: white;
+            color: #ff6392;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact button:hover {
+            background-color: #ff85ac;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .menu-item h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sweet Treats Ice Cream Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Delicious Ice Cream Flavors for Every Occasion</h2>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1606788075762-c2b963d1c8d2" alt="Vanilla Ice Cream">
+            <h3>Classic Vanilla</h3>
+            <p>Rich and creamy vanilla ice cream made from the finest ingredients.</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1596894803284-8c5db545a734" alt="Chocolate Ice Cream">
+            <h3>Chocolate Delight</h3>
+            <p>Decadent chocolate ice cream with a smooth, silky texture.</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1611599533335-23ba8f66992d" alt="Strawberry Ice Cream">
+            <h3>Strawberry Dream</h3>
+            <p>Fresh strawberry ice cream with real fruit pieces mixed in.</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1587233052696-e9b3cf967989" alt="Mint Ice Cream">
+            <h3>Mint Chocolate Chip</h3>
+            <p>Refreshing mint ice cream with chunks of dark chocolate chips.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>At Sweet Treats, we believe in creating the best ice cream experience for our customers. Every flavor is handcrafted using natural ingredients to bring you the joy of ice cream, one scoop at a time.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sweet Treats Ice Cream Shop. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
